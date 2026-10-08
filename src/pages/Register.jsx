@@ -68,20 +68,22 @@ const Register = () => {
 
       toast.success(
         res.data?.message ||
-          "Account created. Check your email to verify your account."
+          "Account created. Check your email for your verification code."
       );
 
-      // Clear form after successful registration
       setForm({
         fullname: "",
         email: "",
         password: "",
       });
 
-      // Give the toast a moment before navigating
-      setTimeout(() => {
+      if (res.data?.requiresVerification) {
+        navigate("/verify-email", {
+          state: { email: res.data.email || email },
+        });
+      } else {
         navigate("/login");
-      }, 1000);
+      }
 
     } catch (error) {
       console.log("=================================");
