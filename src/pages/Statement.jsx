@@ -38,9 +38,9 @@ const Statement = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-8">
 
-      <div className="bg-white p-10 rounded-2xl shadow-lg w-[450px] text-center">
+      <div className="w-full max-w-[450px] rounded-2xl bg-white p-6 text-center shadow-lg sm:p-10">
 
         <FaFilePdf
           size={70}

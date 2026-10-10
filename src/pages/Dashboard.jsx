@@ -75,32 +75,32 @@ const Dashboard = () => {
 
     return (
         <div className="min-h-screen bg-[linear-gradient(135deg,_#f8fbff_0%,_#eef4f8_100%)] px-4 py-6 sm:px-6 lg:px-8">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-[24px] border border-white/70 bg-slate-950/95 px-5 py-4 text-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.8)] backdrop-blur">
-                <div>
+            <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-[24px] border border-white/70 bg-slate-950/95 px-4 py-4 text-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.8)] backdrop-blur sm:px-5">
+                <div className="min-w-0">
                     <p className="text-sm text-slate-400">SecureTrust</p>
                     <h1 className="text-xl font-semibold">Private Banking</h1>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex shrink-0 items-center gap-2 sm:gap-3">
                     <div onClick={() => navigate("/profile")} className="flex cursor-pointer items-center gap-3 rounded-full border border-white/10 bg-white/10 px-3 py-2">
                         {user?.profileImage ? <img src={user.profileImage} alt="Profile" className="h-9 w-9 rounded-full object-cover" /> : <FaUserCircle size={28} />}
                         <span className="hidden text-sm font-medium sm:block">{user?.fullname}</span>
                     </div>
-                    <button onClick={handleLogout} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium transition hover:bg-white/20">
+                    <button onClick={handleLogout} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-sm font-medium transition hover:bg-white/20 sm:px-4">
                         <FaSignOutAlt /> Logout
                     </button>
                 </div>
             </nav>
 
             <div className="mx-auto max-w-7xl py-6">
-                <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-                    <div className="rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-8 text-white shadow-[0_30px_80px_-25px_rgba(15,23,42,0.5)]">
+                <div className="grid min-w-0 gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+                    <div className="min-w-0 rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-5 text-white shadow-[0_30px_80px_-25px_rgba(15,23,42,0.5)] sm:p-8">
                         <div className="flex items-start justify-between gap-4">
                             <div>
                                 <p className="text-sm text-slate-400">Available balance</p>
-                                <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">₦{Number(balance).toLocaleString()}</h2>
+                                <h2 className="mt-3 break-words text-3xl font-semibold tracking-tight sm:text-5xl">₦{Number(balance).toLocaleString()}</h2>
                             </div>
-                            <div className="rounded-2xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm font-medium text-emerald-300">+12.4%</div>
+                            <div className="shrink-0 rounded-2xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-sm font-medium text-emerald-300 sm:px-4 sm:py-3">+12.4%</div>
                         </div>
                         <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300">
                             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><FaCreditCard /> Premium card</span>
@@ -108,11 +108,11 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className="rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]">
+                    <div className="min-w-0 rounded-[32px] border border-slate-200/80 bg-white p-5 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] sm:p-6">
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-sm text-slate-500">This month</p>
-                                <h3 className="mt-1 text-2xl font-semibold text-slate-900">Income & expenses</h3>
+                                <h3 className="mt-1 text-xl font-semibold text-slate-900 sm:text-2xl">Income & expenses</h3>
                             </div>
                             <div className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-700">Stable</div>
                         </div>
@@ -144,11 +144,11 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
-                    <div className="rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]">
-                        <div className="mb-5 flex items-center justify-between">
+                <div className="mt-8 grid min-w-0 gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+                    <div className="min-w-0 rounded-[32px] border border-slate-200/80 bg-white p-4 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] sm:p-6">
+                        <div className="mb-5 flex items-center justify-between gap-3">
                             <div>
-                                <h3 className="text-2xl font-semibold text-slate-900">Recent transactions</h3>
+                                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">Recent transactions</h3>
                                 <p className="text-sm text-slate-500">Your latest account activity</p>
                             </div>
                             <button onClick={() => navigate("/transactions")} className="text-sm font-semibold text-emerald-700">View all</button>
@@ -161,12 +161,12 @@ const Dashboard = () => {
                                 {transactions.slice(0, 5).map((transaction) => {
                                     const isDebit = transaction.type === "Debit";
                                     return (
-                                        <div key={transaction._id} className="flex items-center justify-between rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-4">
-                                            <div>
+                                        <div key={transaction._id} className="flex min-w-0 items-center justify-between gap-3 rounded-[20px] border border-slate-200 bg-slate-50 px-3 py-4 sm:px-4">
+                                            <div className="min-w-0">
                                                 <p className="font-semibold text-slate-900">{transaction.receiver?.fullname || transaction.sender?.fullname}</p>
                                                 <p className="text-sm text-slate-500">{new Date(transaction.createdAt).toLocaleDateString()}</p>
                                             </div>
-                                            <span className={`font-semibold ${isDebit ? "text-red-600" : "text-emerald-600"}`}>
+                                            <span className={`shrink-0 break-words text-right text-sm font-semibold sm:text-base ${isDebit ? "text-red-600" : "text-emerald-600"}`}>
                                                 {isDebit ? "-" : "+"}₦{Number(transaction.amount).toLocaleString()}
                                             </span>
                                         </div>
@@ -176,7 +176,7 @@ const Dashboard = () => {
                         )}
                     </div>
 
-                    <div className="rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]">
+                    <div className="min-w-0 rounded-[32px] border border-slate-200/80 bg-white p-5 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] sm:p-6">
                         <h3 className="text-2xl font-semibold text-slate-900">Notifications</h3>
                         <div className="mt-6 space-y-3">
                             {[
@@ -185,7 +185,7 @@ const Dashboard = () => {
                                 { title: "Security update", text: "A new login device was verified successfully.", time: "3d ago" },
                             ].map((item) => (
                                 <div key={item.title} className="rounded-[20px] border border-slate-200 bg-slate-50 p-4">
-                                    <div className="flex items-center justify-between">
+                                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
                                         <p className="font-semibold text-slate-900">{item.title}</p>
                                         <span className="text-xs text-slate-500">{item.time}</span>
                                     </div>

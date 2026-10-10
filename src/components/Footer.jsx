@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="bg-slate-950 text-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="grid gap-12 md:grid-cols-4">
-          <div>
+          <div className="min-w-0">
             <h2 className="mb-5 text-3xl font-semibold text-emerald-400">SecureTrust Bank</h2>
             <p className="max-w-sm leading-8 text-slate-400">
               A premium digital banking experience designed for secure everyday financial confidence.
@@ -42,9 +42,9 @@ const Footer = () => {
           <div>
             <h3 className="mb-5 text-xl font-semibold">Contact</h3>
             <div className="space-y-4 text-slate-400">
-              <div className="flex items-center gap-3"><FaEnvelope className="text-emerald-400" /> support@securetrustbank.com</div>
-              <div className="flex items-center gap-3"><FaPhoneAlt className="text-emerald-400" /> +234 800 000 0000</div>
-              <div className="flex items-center gap-3"><FaMapMarkerAlt className="text-emerald-400" /> Lagos, Nigeria</div>
+              <div className="flex items-start gap-3 break-all sm:break-normal"><FaEnvelope className="mt-1 shrink-0 text-emerald-400" /> support@securetrustbank.com</div>
+              <div className="flex items-center gap-3"><FaPhoneAlt className="shrink-0 text-emerald-400" /> +234 800 000 0000</div>
+              <div className="flex items-center gap-3"><FaMapMarkerAlt className="shrink-0 text-emerald-400" /> Lagos, Nigeria</div>
             </div>
           </div>
         </div>

@@ -139,12 +139,12 @@ const AdminDashboard = () => {
     }
 
     return (
-        <div className="min-h-screen bg-[linear-gradient(135deg,_#f8fbff_0%,_#eef4f8_100%)] px-4 py-8 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-[linear-gradient(135deg,_#f8fbff_0%,_#eef4f8_100%)] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
             <div className="mx-auto max-w-7xl">
                 <div className="mb-8 flex flex-col gap-4 rounded-[32px] border border-slate-200/80 bg-slate-950 px-6 py-6 text-white shadow-[0_30px_80px_-20px_rgba(15,23,42,0.55)] sm:flex-row sm:items-center sm:justify-between sm:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300">Admin control center</p>
-                        <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">SecureTrust administration</h1>
+                        <h1 className="mt-2 text-2xl font-semibold leading-tight sm:text-4xl">SecureTrust administration</h1>
                         <p className="mt-2 text-sm text-slate-300">Monitor accounts, finances, and platform activity with clarity.</p>
                     </div>
 
@@ -184,14 +184,14 @@ const AdminDashboard = () => {
                             <span className="rounded-full bg-sky-50 px-3 py-1 text-sm font-semibold text-sky-700">Capital</span>
                         </div>
                         <h2 className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Total balance</h2>
-                        <p className="mt-2 text-3xl font-semibold text-slate-900">₦{Number(stats.totalBalance).toLocaleString()}</p>
+                        <p className="mt-2 break-words text-2xl font-semibold text-slate-900 sm:text-3xl">₦{Number(stats.totalBalance).toLocaleString()}</p>
                     </div>
                 </div>
 
                 {/* Charts */}
 
-                <div className="mb-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-                    <div className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)]">
+                <div className="mb-8 grid min-w-0 gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                    <div className="min-w-0 rounded-[28px] border border-slate-200/80 bg-white p-4 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)] sm:p-6">
                         <div className="mb-4 flex items-center justify-between">
                             <div>
                                 <h2 className="text-xl font-semibold text-slate-900">System overview</h2>
@@ -209,7 +209,7 @@ const AdminDashboard = () => {
                         </ResponsiveContainer>
                     </div>
 
-                    <div className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)]">
+                    <div className="min-w-0 rounded-[28px] border border-slate-200/80 bg-white p-4 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)] sm:p-6">
                         <div className="mb-4 flex items-center justify-between">
                             <div>
                                 <h2 className="text-xl font-semibold text-slate-900">User status</h2>
@@ -228,7 +228,7 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                <div className="mb-8 rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)]">
+                <div className="mb-8 min-w-0 rounded-[28px] border border-slate-200/80 bg-white p-4 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)] sm:p-6">
                     <div className="mb-4 flex items-center justify-between">
                         <div>
                             <h2 className="text-2xl font-semibold text-slate-900">Recent transactions</h2>
@@ -237,9 +237,9 @@ const AdminDashboard = () => {
                         <div className="rounded-full bg-slate-100 p-3 text-slate-600"><FaBell /></div>
                     </div>
 
-                    <div className="overflow-x-auto">
+                    <div className="min-w-0 overflow-x-auto">
 
-                        <table className="w-full">
+                        <table className="min-w-[560px]">
 
                             <thead>
 
@@ -325,14 +325,14 @@ const AdminDashboard = () => {
 
                 {/* Users Table */}
 
-                <div className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)]">
+                <div className="rounded-[28px] border border-slate-200/80 bg-white p-4 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.4)] sm:p-6">
                     <div className="relative mb-6">
                         <FaSearch className="absolute left-4 top-4 text-slate-400" />
                         <input type="text" placeholder="Search name, email or account number..." value={search} onChange={(e) => setSearch(e.target.value)} className="w-full rounded-2xl border border-slate-200 bg-slate-50 pl-12 p-3 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-100" />
                     </div>
 
-                    <div className="overflow-x-auto">
-                        <table className="min-w-full text-left">
+                    <div className="min-w-0 overflow-x-auto">
+                        <table className="min-w-[760px] text-left">
                             <thead>
                                 <tr className="border-b border-slate-200 bg-slate-50 text-sm text-slate-600">
                                     <th className="p-4">Name</th>

@@ -43,10 +43,10 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex justify-center items-center">
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-8">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-xl shadow w-full max-w-md"
+        className="w-full max-w-md rounded-xl bg-white p-6 shadow sm:p-8"
       >
         <h2 className="text-3xl font-bold mb-6">
           Change Password

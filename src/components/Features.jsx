@@ -42,13 +42,13 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="bg-white/80 py-24">
+    <section id="features" className="bg-white/80 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
           <span className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
             Features
           </span>
-          <h2 className="mt-4 text-4xl font-semibold text-slate-950 sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
             Built for calm, confident banking
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -58,7 +58,7 @@ const Features = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <div key={index} className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50 p-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_-28px_rgba(15,23,42,0.45)]">
+            <div key={index} className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50 p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_-28px_rgba(15,23,42,0.45)] sm:p-8">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 text-2xl text-white shadow-lg">
                 {feature.icon}
               </div>

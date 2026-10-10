@@ -31,13 +31,13 @@ const Stats = () => {
   };
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-24">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
+        <div className="mb-12 text-center sm:mb-16">
 
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
             Trusted Banking Features
           </h2>
 
@@ -49,7 +49,7 @@ const Stats = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          <div className="bg-slate-50 rounded-2xl p-8 shadow text-center">
+          <div className="rounded-2xl bg-slate-50 p-6 text-center shadow sm:p-8">
 
             <FaUsers className="text-5xl text-blue-600 mx-auto mb-5" />
 

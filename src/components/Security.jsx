@@ -7,13 +7,13 @@ import {
 
 const Security = () => {
   return (
-    <section id="security" className="bg-slate-950 py-24 text-white">
+    <section id="security" className="bg-slate-950 py-16 text-white sm:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>
           <span className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300">
             Your security comes first
           </span>
-          <h2 className="mt-8 text-4xl font-semibold leading-tight sm:text-5xl">
+          <h2 className="mt-8 text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
             Trusted protection for every move
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-300">
@@ -31,7 +31,7 @@ const Security = () => {
             { icon: <FaFingerprint />, title: "Encrypted data", text: "Sensitive account information remains protected at all times.", color: "text-amber-300" },
             { icon: <FaUserShield />, title: "Verified access", text: "Every customer is verified for a smoother, safer experience.", color: "text-sky-300" },
           ].map((item) => (
-            <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition hover:bg-white/10">
+            <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10 sm:p-8">
               <div className={`mb-5 text-3xl ${item.color}`}>{item.icon}</div>
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-400">{item.text}</p>

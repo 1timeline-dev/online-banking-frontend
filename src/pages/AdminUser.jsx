@@ -43,8 +43,8 @@ const AdminUser = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-slate-100 p-4 sm:p-8">
+      <div className="mx-auto max-w-6xl">
 
         {/* Back Button */}
         <button
@@ -55,17 +55,17 @@ const AdminUser = () => {
         </button>
 
         {/* Header */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className="mb-8 rounded-2xl bg-white p-5 shadow-lg sm:p-8">
 
           <div className="flex flex-col items-center">
 
             <FaUserCircle className="text-blue-600 text-8xl mb-4" />
 
-            <h1 className="text-3xl font-bold">
+            <h1 className="break-words text-2xl font-bold sm:text-3xl">
               {user.fullname}
             </h1>
 
-            <p className="text-gray-500">
+            <p className="break-all text-gray-500 sm:break-normal">
               {user.email}
             </p>
 
@@ -78,7 +78,7 @@ const AdminUser = () => {
 
           <div className="bg-blue-600 text-white rounded-xl p-6 shadow">
             <p className="text-sm">Account Number</p>
-            <h2 className="text-xl font-bold">
+            <h2 className="break-all text-xl font-bold">
               {user.accountNumber}
             </h2>
           </div>
@@ -110,7 +110,7 @@ const AdminUser = () => {
         </div>
 
         {/* Customer Information */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className="mb-8 rounded-2xl bg-white p-5 shadow-lg sm:p-8">
 
           <h2 className="text-2xl font-bold mb-6 text-blue-700">
             Customer Information
@@ -120,21 +120,21 @@ const AdminUser = () => {
 
             <div>
               <p className="text-gray-500">Full Name</p>
-              <h3 className="font-semibold text-lg">
+              <h3 className="break-words font-semibold text-lg">
                 {user.fullname}
               </h3>
             </div>
 
             <div>
               <p className="text-gray-500">Email</p>
-              <h3 className="font-semibold text-lg">
+              <h3 className="break-all font-semibold text-lg sm:break-normal">
                 {user.email}
               </h3>
             </div>
 
             <div>
               <p className="text-gray-500">Account Number</p>
-              <h3 className="font-semibold text-lg">
+              <h3 className="break-all font-semibold text-lg sm:break-normal">
                 {user.accountNumber}
               </h3>
             </div>
@@ -151,7 +151,7 @@ const AdminUser = () => {
         </div>
 
         {/* Transactions */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="rounded-2xl bg-white p-5 shadow-lg sm:p-8">
 
           <h2 className="text-2xl font-bold mb-6 text-blue-700">
             Transaction History
@@ -165,9 +165,9 @@ const AdminUser = () => {
 
           ) : (
 
-            <div className="overflow-x-auto">
+            <div className="min-w-0 overflow-x-auto">
 
-              <table className="w-full">
+              <table className="min-w-[600px]">
 
                 <thead className="bg-blue-600 text-white">
 

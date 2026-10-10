@@ -7,17 +7,17 @@ import {
 
 const BankingPreview = () => {
   return (
-    <section className="bg-slate-100 py-24">
+    <section className="bg-slate-100 py-16 sm:py-24">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
-        <div className="text-center mb-16">
+        <div className="mb-12 text-center sm:mb-16">
 
           <span className="text-blue-600 font-semibold uppercase">
             Dashboard Preview
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             Banking At Your Fingertips
           </h2>
 
@@ -28,13 +28,13 @@ const BankingPreview = () => {
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
           {/* Virtual Card */}
 
           <div>
 
-            <div className="bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 text-white rounded-3xl p-8 shadow-2xl">
+            <div className="min-w-0 rounded-3xl bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 p-5 text-white shadow-2xl sm:p-8">
 
               <div className="flex justify-between items-center">
 
@@ -50,11 +50,11 @@ const BankingPreview = () => {
                 Virtual Debit Card
               </h3>
 
-              <h1 className="text-3xl tracking-widest font-bold mt-4">
+              <h1 className="mt-4 text-2xl font-bold tracking-[0.2em] sm:text-3xl sm:tracking-widest">
                 **** **** **** 4832
               </h1>
 
-              <div className="flex justify-between mt-12">
+              <div className="mt-10 flex flex-wrap items-end justify-between gap-5 sm:mt-12">
 
                 <div>
 
@@ -74,7 +74,7 @@ const BankingPreview = () => {
                     Balance
                   </p>
 
-                  <h3 className="font-bold text-2xl mt-2">
+                  <h3 className="mt-2 text-xl font-bold sm:text-2xl">
                     ₦245,800
                   </h3>
 
@@ -101,9 +101,9 @@ const BankingPreview = () => {
                 <FaCheckCircle className="text-green-500" />
               </div>
 
-              <div className="grid grid-cols-2 gap-6 mt-8">
+              <div className="mt-8 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 sm:gap-6">
 
-                <div className="bg-green-100 rounded-xl p-5">
+                <div className="min-w-0 rounded-xl bg-green-100 p-4 sm:p-5">
 
                   <FaArrowDown className="text-green-600 text-2xl" />
 
@@ -111,13 +111,13 @@ const BankingPreview = () => {
                     Income
                   </p>
 
-                  <h2 className="text-3xl font-bold text-green-700">
+                  <h2 className="text-2xl font-bold text-green-700 sm:text-3xl">
                     ₦520K
                   </h2>
 
                 </div>
 
-                <div className="bg-red-100 rounded-xl p-5">
+                <div className="min-w-0 rounded-xl bg-red-100 p-4 sm:p-5">
 
                   <FaArrowUp className="text-red-600 text-2xl" />
 
@@ -125,7 +125,7 @@ const BankingPreview = () => {
                     Expenses
                   </p>
 
-                  <h2 className="text-3xl font-bold text-red-600">
+                  <h2 className="text-2xl font-bold text-red-600 sm:text-3xl">
                     ₦274K
                   </h2>
 

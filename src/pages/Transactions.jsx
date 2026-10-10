@@ -48,11 +48,11 @@ const Transactions = () => {
 
   return (
     <div className="min-h-screen bg-[linear-gradient(135deg,_#f8fbff_0%,_#eef4f8_100%)] px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-[0_30px_80px_-25px_rgba(15,23,42,0.35)] sm:p-8 lg:p-10">
+      <div className="mx-auto max-w-7xl rounded-[24px] border border-slate-200/80 bg-white p-4 shadow-[0_30px_80px_-25px_rgba(15,23,42,0.35)] sm:rounded-[32px] sm:p-8 lg:p-10">
         <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">Transactions</p>
-            <h1 className="mt-2 text-3xl font-semibold text-slate-900">Transaction history</h1>
+            <h1 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">Transaction history</h1>
             <p className="mt-2 text-slate-500">Review every movement with clarity and confidence.</p>
           </div>
 
@@ -74,8 +74,8 @@ const Transactions = () => {
         {filteredTransactions.length === 0 ? (
           <div className="rounded-[24px] bg-slate-50 py-16 text-center text-slate-500">No transactions found.</div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="min-w-full text-left">
+          <div className="min-w-0 overflow-x-auto">
+            <table className="min-w-[620px] text-left">
               <thead className="bg-slate-950 text-sm text-white">
                 <tr>
                   <th className="rounded-tl-[20px] px-4 py-3">Date</th>

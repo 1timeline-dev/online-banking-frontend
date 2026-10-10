@@ -41,8 +41,8 @@ const Transfer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-8">
+      <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg sm:p-8">
 
         <h1 className="text-3xl font-bold mb-6 text-center">
           Transfer Money

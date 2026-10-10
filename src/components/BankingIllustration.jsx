@@ -36,7 +36,7 @@ const BankingIllustration = () => {
       <motion.div
         animate={{ y: [0, -12, 0], x: [0, 8, 0] }}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -right-4 bottom-8 rounded-[24px] border border-emerald-200 bg-emerald-50 p-4 shadow-lg"
+        className="absolute -right-4 bottom-8 rounded-[24px] border border-emerald-200 bg-emerald-50 p-4 shadow-lg max-[420px]:right-0"
       >
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">Protected</p>
         <p className="mt-2 text-lg font-semibold text-slate-900">24/7 support</p>

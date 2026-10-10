@@ -66,7 +66,7 @@ const Profile = () => {
           <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6 text-center">
             {user.profileImage ? <img src={user.profileImage} alt="Profile" className="mx-auto h-32 w-32 rounded-full border-4 border-emerald-500 object-cover" /> : <FaUserCircle size={120} className="mx-auto text-slate-400" />}
             <h2 className="mt-5 text-2xl font-semibold text-slate-900">{user.fullname}</h2>
-            <p className="mt-2 text-slate-500">{user.email}</p>
+            <p className="mt-2 break-all text-slate-500 sm:break-normal">{user.email}</p>
 
             <div className="mt-6 rounded-[24px] border border-slate-200 bg-white p-4">
               <label className="flex cursor-pointer items-center justify-center gap-2 rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-100">

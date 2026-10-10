@@ -29,17 +29,17 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-slate-100"
+      className="bg-slate-100 py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
-        <div className="text-center mb-16">
+        <div className="mb-12 text-center sm:mb-16">
 
           <span className="text-blue-600 font-semibold uppercase">
             Why This Project Stands Out
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             Built With Modern Banking Features
           </h2>
 
@@ -57,7 +57,7 @@ const Testimonials = () => {
 
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+              className="rounded-3xl bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl sm:p-8"
             >
 
               <FaQuoteLeft
@@ -68,9 +68,9 @@ const Testimonials = () => {
                 {item.review}
               </p>
 
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-y-4">
 
-                <div className="flex items-center gap-4">
+                <div className="flex min-w-0 items-center gap-4">
 
                   <FaUserCircle
                     className="text-5xl text-blue-600"
